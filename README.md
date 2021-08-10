@@ -1,2 +1,2 @@
 # SimpleNeuralNet
-a simple neural network for classifying MNIST digits
+a simple neural network for classifying Fashion-MNIST clothing items
