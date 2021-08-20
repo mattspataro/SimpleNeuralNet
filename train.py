@@ -35,7 +35,7 @@ def train(dataloader, net, loss_fn, optimizer):
         # Backpropagation
         optimizer.zero_grad()
         loss.backward()
-print_results        optimizer.step()
+        optimizer.step()
 
         if batch % 100 == 0:
             loss, current = loss.item(), batch * len(X)
@@ -55,9 +55,6 @@ def test(dataloader, net, loss_fn):
     test_loss /= num_batches
     correct /= size
     print(f"Test Error: \n Accuracy: {(100*correct):>0.1f}%, Avg loss: {test_loss:>8f} \n")
-
-
-utils.attach_debugger()
 
 if __name__ == "__main__":
     parser = get_parser()
